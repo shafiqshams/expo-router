@@ -1,7 +1,13 @@
+import { Redirect } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Profile() {
+  const isLoggedIn = false;
+
+  if (!isLoggedIn) {
+    return <Redirect href="/login" />;
+  }
   return (
     <View style={styles.container}>
       <Text>Profile</Text>
