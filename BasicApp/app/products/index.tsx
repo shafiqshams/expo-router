@@ -6,9 +6,13 @@ export default function ProductList() {
   return (
     <View style={styles.container}>
       <Text>ProductList</Text>
-      <Link href="./products/1">Product 1</Link>
-      <Link href="./products/2">Product 2</Link>
-      <Link href="./products/3">Product 3</Link>
+
+      <Link href="./1" relativeToDirectory>
+        Product 1
+      </Link>
+
+      <Link href="./2">Product 2</Link>
+      <Link href="./3">Product 3</Link>
     </View>
   );
 }
