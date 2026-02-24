@@ -1,4 +1,5 @@
 import { Stack } from "expo-router";
+import { Pressable, Text } from "react-native";
 
 export default function RootLayout() {
   return (
@@ -10,6 +11,15 @@ export default function RootLayout() {
           headerStyle: { backgroundColor: "#6a51ae" },
           headerTintColor: "white",
           headerTitleStyle: { fontWeight: "bold" },
+          headerRight: () => (
+            <Pressable
+              onPress={() => {
+                alert("Menu is pressed");
+              }}
+            >
+              <Text style={{ color: "white", marginRight: 10 }}>Menu</Text>
+            </Pressable>
+          ),
         }}
       />
       <Stack.Screen
