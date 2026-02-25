@@ -3,7 +3,18 @@ import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarLabelPosition: "below-icon",
+        tabBarShowLabel: true,
+        headerTitle: "Recipes App",
+        headerStyle: { backgroundColor: "#6a51ae" },
+        headerTintColor: "white",
+        tabBarInactiveTintColor: "grey",
+        tabBarActiveBackgroundColor: "#6a51ae",
+        tabBarActiveTintColor: "white",
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
