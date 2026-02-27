@@ -1,5 +1,6 @@
 import Ionicons from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
+import { HapticTab } from "../components/HapticTab";
 
 export default function RootLayout() {
   return (
@@ -8,6 +9,7 @@ export default function RootLayout() {
         tabBarInactiveTintColor: "#727272",
         tabBarActiveTintColor: "#ff00c3",
         tabBarBadgeStyle: { backgroundColor: "#000", color: "#fff" },
+        tabBarButton: HapticTab,
 
       }}
     >
