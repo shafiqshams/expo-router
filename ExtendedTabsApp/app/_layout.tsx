@@ -1,5 +1,38 @@
-import { Stack } from "expo-router";
+import Ionicons from "@expo/vector-icons/FontAwesome";
+import { Tabs } from "expo-router";
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <Tabs
+      screenOptions={{
+        tabBarInactiveTintColor: "#727272",
+        tabBarActiveTintColor: "#ff00c3",
+        tabBarBadgeStyle: { backgroundColor: "#000", color: "#fff" },
+
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+          ),
+          title: "Home",
+        }}
+      />
+
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarLabel: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="user" color={color} size={size} />
+          ),
+          tabBarBadge: 3,
+          title: "Profile",
+        }}
+      />
+    </Tabs>
+  );
 }
