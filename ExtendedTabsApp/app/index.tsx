@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <ScrollView >
-      <Link href="/profile" style={{ padding: 10 }}>
+      <Link href="/profile" style={{ padding: 10 }} asChild>
         <Button title="Profile" />
       </Link>
 
