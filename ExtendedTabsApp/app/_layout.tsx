@@ -16,6 +16,7 @@ export default function RootLayout() {
         tabBarPosition: "left",
         tabBarVariant: "material",
         tabBarLabelStyle: { fontSize: 12 },
+        animation: "shift",
       }}
     >
       <Tabs.Screen
