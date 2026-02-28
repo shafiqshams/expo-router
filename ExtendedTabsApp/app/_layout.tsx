@@ -41,6 +41,12 @@ export default function RootLayout() {
           title: "Profile",
         }}
       />
+      <Tabs.Screen
+        name="hidden"
+        options={{
+         href: null
+        }}
+      />
     </Tabs>
   );
 }
