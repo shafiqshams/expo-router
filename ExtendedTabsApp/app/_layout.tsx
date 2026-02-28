@@ -12,7 +12,10 @@ export default function RootLayout() {
         tabBarBadgeStyle: { backgroundColor: "#000", color: "#fff" },
         tabBarButton: HapticTab,
         tabBarBackground: BlurTabBarBackground,
-        tabBarStyle: { position: "absolute" },
+        // tabBarStyle: { width: 100 },
+        tabBarPosition: "left",
+        tabBarVariant: "material",
+        tabBarLabelStyle: { fontSize: 12 },
       }}
     >
       <Tabs.Screen
