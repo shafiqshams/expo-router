@@ -1,6 +1,7 @@
 import Ionicons from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 import { HapticTab } from "../components/HapticTab";
+import BlurTabBarBackground from "../components/TabBarBackground";
 
 export default function RootLayout() {
   return (
@@ -10,7 +11,8 @@ export default function RootLayout() {
         tabBarActiveTintColor: "#ff00c3",
         tabBarBadgeStyle: { backgroundColor: "#000", color: "#fff" },
         tabBarButton: HapticTab,
-
+        tabBarBackground: BlurTabBarBackground,
+        tabBarStyle: { position: "absolute" },
       }}
     >
       <Tabs.Screen
