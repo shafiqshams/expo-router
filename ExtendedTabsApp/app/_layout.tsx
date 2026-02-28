@@ -1,10 +1,11 @@
+import SpecialTabButton from "@/components/SpecialTabButton";
 import Ionicons from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 import { HapticTab } from "../components/HapticTab";
 import BlurTabBarBackground from "../components/TabBarBackground";
 
 export default function RootLayout() {
-  return (
+    return (
     <Tabs
       screenOptions={{
         tabBarInactiveTintColor: "#727272",
@@ -12,10 +13,13 @@ export default function RootLayout() {
         tabBarBadgeStyle: { backgroundColor: "#000", color: "#fff" },
         tabBarButton: HapticTab,
         tabBarBackground: BlurTabBarBackground,
-        // tabBarStyle: { width: 100 },
-        tabBarPosition: "left",
-        tabBarVariant: "material",
-        tabBarLabelStyle: { fontSize: 12 },
+        tabBarStyle: { 
+          position: 'absolute', 
+          height: 50,
+        },
+        // tabBarIconStyle: { width: 100 },
+        // tabBarPosition: "left",
+        // tabBarVariant: "material",
         animation: "shift",
       }}
     >
@@ -41,7 +45,7 @@ export default function RootLayout() {
             e.preventDefault()
             console.log("tabPress")
           }
-        }}
+        }} 
       />
 
       <Tabs.Screen
