@@ -31,6 +31,20 @@ export default function RootLayout() {
       />
 
       <Tabs.Screen
+        name="custom"
+        options={{
+          tabBarButton: SpecialTabButton,
+        }}
+
+        listeners={{
+          tabPress: (e) => {
+            e.preventDefault()
+            console.log("tabPress")
+          }
+        }}
+      />
+
+      <Tabs.Screen
         name="profile"
         options={{
           tabBarLabel: "Profile",
